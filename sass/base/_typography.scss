@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+
+h1,
+h2 {
+  @include main-typo;
+  font-size: $font-size-l;
+  font-weight: bold;
+}
+
+h3,
+p,
+a {
+  @include main-typo;
+  font-size: $font-size-s;
+}
+
+a {
+  text-decoration: none;
+  color: $intial-color;
+}
+
+.block-location {
+  &__location {
+    font-weight: bold;
+  }
+}
+
+.block-reservation {
+  &__text {
+    font-size: $font-size-s;
+  }
+  &__btn {
+    font-size: $font-size-s;
+  }
+}
+
+.block-fonctionnement {
+  &__text {
+    font-weight: bold;
+  }
+}
+
+.block-menu {
+  &__titre {
+    font-size: $font-size-xl;
+    font-weight: normal;
+  }
+  &__choix {
+    & > h2 {
+      font-size: $font-size-m;
+      font-weight: normal;
+    }
+  }
+  &__plats {
+    & > h3 {
+      font-weight: bold;
+      font-size: $font-size-m;
+      @include txtretrac;
+    }
+    & > p {
+      font-size: $font-size-s;
+      @include txtretrac;
+    }
+  }
+  &__prix {
+    & > p {
+      font-size: $font-size-s;
+    }
+  }
+  &__btn {
+    font-size: $font-size-s;
+  }
+}
+
+.block-logo-footer {
+  &__logo {
+    font-size: $font-size-l;
+    font-family: $font-title;
+  }
+}

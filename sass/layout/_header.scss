@@ -1,0 +1,10 @@
+.block-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  &__logo {
+    margin: 25px 0 15px 0;
+    height: 30px;
+  }
+}

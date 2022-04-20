@@ -1,0 +1,109 @@
+.block-logo {
+  &__icon {
+    position: absolute;
+    left: 20px;
+    top: 42%;
+    font-size: 24px;
+  }
+}
+
+.background-restau {
+  width: 100%;
+  height: 300px;
+  &__img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.block-menu {
+  background-color: $background-color;
+  border-radius: 40px 40px 0 0;
+  padding: 0 15px 0 15px;
+  margin-top: -50px;
+  position: relative;
+  &__container {
+    @for $i from 1 through 10 {
+      #card#{$i} {
+        animation-delay: $i * 150ms;
+      }
+    }
+  }
+  &__restau {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0 10px 0;
+  }
+  &--grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    height: auto;
+    grid-template-areas:
+      "entrees"
+      "plats"
+      "desserts";
+    & > #entrees {
+      grid-area: entrees;
+    }
+    & > #plats {
+      grid-area: plats;
+    }
+    & > #desserts {
+      grid-area: desserts;
+    }
+  }
+  &__titre {
+    font-family: $font-title;
+  }
+  &__block-coeur {
+    width: 30px;
+    height: 30px;
+  }
+  &__coeur {
+    @include heart;
+  }
+  &__choix {
+    display: grid;
+    & > h2 {
+      margin: 20px 0 18px 0;
+    }
+    &--underline {
+      text-decoration: underline 4px;
+      text-decoration-color: $tertiary-color;
+      text-underline-offset: 8px;
+    }
+  }
+  @include menu-card;
+  &__container-btn {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0 50px 0;
+  }
+  &__btn {
+    @include btn-bicolor;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .block-menu {
+    max-width: 768px;
+    margin: -50px auto 0 auto;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .block-menu {
+    max-width: 1980px;
+    margin: -50px auto 0 auto;
+    &--grid {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr;
+      grid-gap: 30px;
+      grid-template-areas: "entrees plats desserts";
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "p3git",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css -w --style expanded",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CedricMlg/P3Ohmyfood.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "browserslist": "last 4 versions",
+  "bugs": {
+    "url": "https://github.com/CedricMlg/P3Ohmyfood/issues"
+  },
+  "homepage": "https://github.com/CedricMlg/P3Ohmyfood#readme",
+  "dependencies": {
+    "sass": "^1.49.9"
+  }
+}

@@ -1,0 +1,34 @@
+@mixin heart {
+  overflow: visible;
+  &--vide {
+    width: 30px;
+    position: absolute;
+    z-index: 1;
+    stroke: black;
+    stroke-width: 20;
+    fill: transparent;
+    transition: opacity 1500ms;
+    &:hover {
+      opacity: 0;
+      & + .block-restaurants__coeur--plein {
+        opacity: 1;
+        animation: 1500ms ease-in-out 0ms forwards fill-heart;
+      }
+      & + .block-menu__coeur--plein {
+        opacity: 1;
+        animation: 1500ms ease-in-out 0ms forwards fill-heart;
+      }
+    }
+  }
+  &--plein {
+    width: 30px;
+    position: absolute;
+    opacity: 0;
+    z-index: 0;
+    stroke: transparent;
+    stroke-width: 20;
+    transition: opacity 1500ms;
+    fill: url(#gradientheart);
+    @include keyfillheart;
+  }
+}
