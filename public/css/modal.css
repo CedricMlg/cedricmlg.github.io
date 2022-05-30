@@ -160,6 +160,7 @@ main {
   font-size: 16px;
 }
 
+
 .button:hover {
   background: #3876ac;
 }
@@ -195,8 +196,26 @@ main {
 }
 
 .modal-body {
+  display: block;
   padding: 15px 8%;
   margin: 15px auto;
+}
+
+.submitAlert {
+  display: none;
+  padding: 15px 8%;
+  margin: 15px auto;
+}
+
+.msgInscritpion {
+  font-weight: normal;
+  text-align: center;
+  margin-top: 200px;
+  margin-bottom: 200px;
+  font-size: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 label {
@@ -252,7 +271,7 @@ input[data-error]::after {
 .checkbox2-label {
   position: relative;
   margin-left: 36px;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: normal;
 }
 .checkbox-label .checkbox-icon,

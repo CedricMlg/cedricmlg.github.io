@@ -21,6 +21,8 @@ class Form {
     this.formCheck = document.getElementById("formCheck");
     this.formCheckbox1 = document.getElementById("checkbox1");
     this.alertCheck = document.getElementById("formCAlert");
+    this.modalBody = document.querySelector(".modal-body");
+    this.modalAlert = document.querySelector(".submitAlert");
   }
 
   async checkData(envoi) {
@@ -130,7 +132,8 @@ class Form {
     if (!formValid) {
       return false;
     } else {
-      alert("Votre inscription à bien été validée !");
+      this.modalBody.style.display = "none";
+      this.modalAlert.style.display = "block";
     }
   }
 }

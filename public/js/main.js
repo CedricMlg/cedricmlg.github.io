@@ -4,7 +4,10 @@ import { Form } from "./modules/form.js";
 const modalForm = document.getElementById("inscription");
 const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
+const modalBody = document.querySelector(".modal-body");
+const modalAlert = document.querySelector(".submitAlert");
 const modalClose = document.querySelectorAll(".close");
+const modalMerci = document.getElementById("close-merci");
 const iconNav = document.getElementById("iconNav");
 
 // launch modal event
@@ -17,14 +20,21 @@ modalClose.forEach((closeBtn) =>
   closeBtn.addEventListener("click", closeModal)
 );
 
+// close post registration message
+modalMerci.addEventListener("click", closeModal)
+
+
 // launch modal form
 function launchModal() {
   modalbg.style.display = "block";
+  modalBody.style.display = "block";
+  modalAlert.style.display = "none";
 }
 
 // close modal form
 function closeModal() {
   modalbg.style.display = "none";
+  modalAlert.style.display = "none";
 }
 
 // check if every field of input is correctly filled, allow to send the form if everything is ok, return and hollow the error where there is one
